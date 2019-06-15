@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+    <meta name="description" content="Free Web tutorials on HTML and CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base target="_blank">
+    <title>Page example 2</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <select>
+        <option value="tuychon">Tùy chọn</option>
+        <option >Tùy chọn 1</option>
+        <option id="dautrang">Tùy chọn 2</option>
+    </select>
+
+    <section>
+        <a href="layout.html">Trang trước</a><br>
+        <a href="Page_3.html">Trang sau</a><br>
+        <bdo dir="ltr">Đọc chữ từ trái sang phải.</bdo><br>
+        <bdo dir="rtl">Đọc chữ từ phải sang trái..iárt gnas iảhp ừt ữhc cọĐ</bdo>
+    </section>
+
+    <h3>Thẻ button:</h3>
+    <div>
+        <button type="button" onclick="alert('hello World!!!')">Click me!</button>
+        <button type="button" autofocus onclick="alert(':*')">Click Me!</button>
+        <button type="button" disabled>Click Me!</button>
+    </div>
+    <div>
+        <form action="#" method="GET">
+            Your name: <input type="text" name="name"><br>
+            <button name="submit" type="submit" formmethod="POST" formtarget="_self">Submit</button><br>
+            <button name="reset" type="reset">RESET</button>
+        </form>
+        <form>
+            <button name="subject" type="submit" value="fav_HTML">HTML</button>
+        </form>
+    </div>
+    <canvas id="myCanvas" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 80, 100);
+    </script>
+    <table>
+        <caption>Bảng biểu</caption>
+        <colgroup>
+            <col span="2" style="background-color: aqua; border:1px solid slategrey;">
+            <col style="background-color: wheat;">
+        </colgroup>
+        <thead>
+            <tr>
+            <th>H<sub>2</sub>O</th>
+            <th>H<sub>2</sub>SO<sub>4</sub></th>
+            <th>H<sub>2</sub>CO<sub>3</sub></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>name</td>
+            <td>Anh</td>
+            <td>Ngoc</td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>class</td>
+                <td>CL</td>
+                <td>CL</td>
+            </tr>
+        </tfoot>
+    </table>
+    <object width="580" height="400" data="../video/PrettyOnTheInside.mp4">
+    </object>
+    <footer>
+        <a href="#dautrang">Quay về đầu trang</a>
+    </footer>
+</body>
+
+</html>
