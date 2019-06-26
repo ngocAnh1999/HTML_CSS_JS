@@ -3,4 +3,4 @@ project html, css, js
 ### Tài liệu học tập:
 - *[Tài liệu BOOTSTRAP 3 ](https://www.w3schools.com/bootstrap/)*
 - *[Tài liệu HTML](https://www.w3schools.com/tags/default.asp)*
-- *[T](https://www.w3schools.com/css/)*
+- *[Tài liệu CSS](https://www.w3schools.com/css/)*
