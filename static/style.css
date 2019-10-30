@@ -1,0 +1,15 @@
+
+a {
+    color: rgb(43, 9, 68);
+}
+a:hover {
+    color: rgb(133, 233, 183);
+}
+option {
+    background-color: beige;
+    color: cornflowerblue;
+}
+#option::placeholder {
+    color: darkblue;
+    background-color: antiquewhite;
+}

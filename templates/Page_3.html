@@ -47,7 +47,7 @@
     </svg>
     <section>
         <h3>Thẻ details (chi tiết) và thẻ sumary (Tóm tắt)</h3>
-        <details open>
+        <details >
             <summary>Hai loại đồ uống phổ biến</summary>
             <dl>
                 <dt>Coffee</dt>
@@ -82,12 +82,12 @@
             <input type="submit" value="submit">
         </form>
     </section>
-    <section>
+    <!-- <section>
         <h3>Link Video:</h3>
         <iframe width="580px" height="400px" src="../video/PrettyOnTheInside.mp4?autoplay=0">
             <p>Your browse un support file mp4 :(</p>
         </iframe>
-    </section>
+    </section> -->
     <section>
         <script>
             document.write("Hello World!!!")
@@ -100,13 +100,23 @@
         Downloading progress:
         <progress value="22" max="100">
     </section>
+    <p id="demo"></p>
     <section>
         <footer>
             <a href="#dautrang">Quay về đầu trang</a>
         </footer>
     </section>
 
-
+<script>
+    var x = "ngọc<br>", y = "Ánh";
+    document.write(x+ " "+ y);
+    window.alert(x+ " "+ y);
+    document.getElementById("demo").innerHTML=x+y;
+    function myFunction() {
+        alert("Hello World!");
+    }
+    myFunction();
+</script>
 </body>
 
 </html>
