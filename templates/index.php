@@ -40,6 +40,9 @@
 			background-color: #B0C4DE !important;
 			color: #FFF !important;
 		}
+		.modal-body label {
+			width: 150px;
+		}
 	</style>
 </head>
 <body>
@@ -53,7 +56,7 @@
 				<nav class="navbar navbar-expand-sm row">
 					<ul class="navbar-nav col-sm-4">
 						<li class="nav-item ml-4">
-						<a class="nav-link btn btn-info ml-2" id="add" href="#">Thêm</a>
+						<a class="nav-link btn btn-info ml-2" id="add" data-toggle="modal" data-target="#modalAdd">Thêm</a>
 						</li>
 						<li class="nav-item">
 						<a class="nav-link btn btn-info ml-2 disabled" id="edit" href="#">Sửa</a>
@@ -99,7 +102,42 @@
 				</table>
 			</div>
 		</div>
-		<div class="footer"></div>
+		<div class="modal fade" id="modalAdd">
+			<div class="modal-dialog">
+			<div class="modal-content">
+			
+				<!-- Modal Header -->
+				<div class="modal-header">
+				<h4 class="modal-title">Thêm mới</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+				<!-- Modal body -->
+				<div class="modal-body">
+					<label for="">Chọn thể loại: </label>
+					<select class="form-control">
+						<option>Thể loại 1</option>
+						<option>Thể loại 2</option>
+					</select>
+					<br />
+					<label for="">Tên sách: </label>
+					<input type="text" placeholder="Thêm tên sách" class="px-2" />
+					&nbsp;<span class="text-danger">(*)</span>
+					<br/>
+					<label for="">Năm xuất bản: </label>
+					<input type="number" placeholder="Năm xuất bản" class="px-2" />
+					&nbsp;<span class="text-danger">(*)</span>
+				</div>
+				
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 		<script>
 
 			document.getElementById("check-all").onclick = function() {
