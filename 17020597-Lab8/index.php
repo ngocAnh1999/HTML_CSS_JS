@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
 <?php include("connect.php"); ?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +78,7 @@
 					</form>
 				</nav>
             </div>
-            <table class="table-bordered table-striped w-100">
+            <table id="main_table" class="table-bordered table-striped w-100">
                 <thead>
                     <tr>
                         <th>Mã tỉnh</th>
@@ -99,7 +98,7 @@
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr>";
                                 echo "<td name='id_tinh'>". $row["id"] ."</td>";
-                                echo "<td name='ten_tinh'><a href=\"huyen.php\" data-method=\"get\" var='". $row["name"] ."'>". $row["name"] ."</a></td>";
+                                echo "<td name='ten_tinh'><a href='#' onclick='javascript:sendHuyen(this)'>". $row["name"] ."</a></td>";
                                 echo "<td name='tong_huyen'>". $row["total"] ."</td>";
                                 echo "<td onclick='javascript:modalDelete(this)' class='btn-delete' data-toggle=\"modal\" data-target=\"#modalDelete\">X</td>";
                                 echo "<td class='btn-edit' data-toggle=\"modal\" data-target=\"#modalEdit\" onclick='javascript:modalEdit(this)'>edit</td>";
@@ -111,6 +110,9 @@
                     ?>
                 </tbody>
             </table>
+            <form id="form-huyen" action="huyen.php" method="post" hidden>
+                <input name="tinh_val" id="tinh_val" />
+            </form>
         </div>
         <div class="footer row fixed-bottom"></div>
 
@@ -215,6 +217,10 @@
             else {
                 btn_save.disabled = false;
             }
+        }
+        function sendHuyen(me) {
+            document.getElementById("tinh_val").value = me.text;
+            document.getElementById("form-huyen").submit();
         }
 
     </script>
